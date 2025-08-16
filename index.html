@@ -120,45 +120,102 @@
             <h2 class="section-title">Projects by Region</h2>
             <p class="subtitle">The following are places we have executed our projects.</p>
             <div class="region-links">
-                <a href="#" class="region-link active">Nigeria</a>
-                <a href="#" class="region-link">Usa</a>
-                <a href="#" class="region-link">Europe</a>
-                <a href="#" class="region-link">World Wide</a>
+                <a href="#" class="region-link active" data-region="nigeria">Nigeria</a>
+                <a href="#" class="region-link" data-region="usa">Usa</a>
+                <a href="#" class="region-link" data-region="europe">Europe</a>
+                <a href="#" class="region-link" data-region="world">World Wide</a>
             </div>
             <div class="map-container">
-                <svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+                <svg id="map-nigeria" class="region-map active-map" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
                     <defs>
-                        <pattern id="hex-pattern" patternUnits="userSpaceOnUse" width="51.96" height="30" patternTransform="scale(0.3)">
+                        <pattern id="hex-pattern-nigeria" patternUnits="userSpaceOnUse" width="51.96" height="30" patternTransform="scale(0.3)">
                             <polygon points="8.66,0 25.98,0 34.64,15 25.98,30 8.66,30 0,15" fill="#ccc" stroke="#aaa" stroke-width="1" />
                         </pattern>
                     </defs>
-                    <rect width="1000" height="500" fill="url(#hex-pattern)" />
+                    <rect width="1000" height="500" fill="url(#hex-pattern-nigeria)" />
+                    <!-- Simple Nigeria outline approximation -->
+                    <path d="M400 100 L600 100 L600 400 L400 400 Z M450 150 L550 150 L550 350 L450 350 Z" fill="none" stroke="#888" stroke-width="2" />
+                    <!-- Location icons (blue) -->
+                    <g class="location-icon">
+                        <path d="M500 250 m -10 0 a 10 10 0 1 0 20 0 a 10 10 0 1 0 -20 0" fill="#00aaff" />
+                        <path d="M500 240 L490 260 H510 Z" fill="#000" />
+                    </g>
+                    <g class="location-icon">
+                        <path d="M480 300 m -10 0 a 10 10 0 1 0 20 0 a 10 10 0 1 0 -20 0" fill="#00aaff" />
+                        <path d="M480 290 L470 310 H490 Z" fill="#000" />
+                    </g>
+                </svg>
+                <svg id="map-usa" class="region-map" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg" style="display:none;">
+                    <defs>
+                        <pattern id="hex-pattern-usa" patternUnits="userSpaceOnUse" width="51.96" height="30" patternTransform="scale(0.3)">
+                            <polygon points="8.66,0 25.98,0 34.64,15 25.98,30 8.66,30 0,15" fill="#ccc" stroke="#aaa" stroke-width="1" />
+                        </pattern>
+                    </defs>
+                    <rect width="1000" height="500" fill="url(#hex-pattern-usa)" />
+                    <!-- Simple USA outline approximation -->
+                    <path d="M100 100 L900 100 L900 400 L100 400 Z M200 150 L800 150 L800 350 L200 350 Z" fill="none" stroke="#888" stroke-width="2" />
+                    <!-- Location icons -->
+                    <g class="location-icon">
+                        <path d="M300 200 m -10 0 a 10 10 0 1 0 20 0 a 10 10 0 1 0 -20 0" fill="#00aaff" />
+                        <path d="M300 190 L290 210 H310 Z" fill="#000" />
+                    </g>
+                    <g class="location-icon">
+                        <path d="M600 250 m -10 0 a 10 10 0 1 0 20 0 a 10 10 0 1 0 -20 0" fill="#00aaff" />
+                        <path d="M600 240 L590 260 H610 Z" fill="#000" />
+                    </g>
+                </svg>
+                <svg id="map-europe" class="region-map" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg" style="display:none;">
+                    <defs>
+                        <pattern id="hex-pattern-europe" patternUnits="userSpaceOnUse" width="51.96" height="30" patternTransform="scale(0.3)">
+                            <polygon points="8.66,0 25.98,0 34.64,15 25.98,30 8.66,30 0,15" fill="#ccc" stroke="#aaa" stroke-width="1" />
+                        </pattern>
+                    </defs>
+                    <rect width="1000" height="500" fill="url(#hex-pattern-europe)" />
+                    <!-- Simple Europe outline approximation -->
+                    <path d="M300 100 L700 100 L700 400 L300 400 Z" fill="none" stroke="#888" stroke-width="2" />
+                    <!-- Location icons -->
+                    <g class="location-icon">
+                        <path d="M400 200 m -10 0 a 10 10 0 1 0 20 0 a 10 10 0 1 0 -20 0" fill="#00aaff" />
+                        <path d="M400 190 L390 210 H410 Z" fill="#000" />
+                    </g>
+                    <g class="location-icon">
+                        <path d="M600 300 m -10 0 a 10 10 0 1 0 20 0 a 10 10 0 1 0 -20 0" fill="#00aaff" />
+                        <path d="M600 290 L590 310 H610 Z" fill="#000" />
+                    </g>
+                </svg>
+                <svg id="map-world" class="region-map" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg" style="display:none;">
+                    <defs>
+                        <pattern id="hex-pattern-world" patternUnits="userSpaceOnUse" width="51.96" height="30" patternTransform="scale(0.3)">
+                            <polygon points="8.66,0 25.98,0 34.64,15 25.98,30 8.66,30 0,15" fill="#ccc" stroke="#aaa" stroke-width="1" />
+                        </pattern>
+                    </defs>
+                    <rect width="1000" height="500" fill="url(#hex-pattern-world)" />
                     <!-- Simple world outline approximation -->
                     <path d="M100 200 Q150 100 200 200 T300 200 T400 150 T500 200 T600 150 T700 200 T800 150 T900 200 V400 H100 Z" fill="none" stroke="#888" stroke-width="2" />
-                    <!-- Pins approximating image positions -->
-                    <g class="pin">
-                        <circle cx="250" cy="300" r="8" fill="#00aaff" />
-                        <path d="M250 285 L242 300 H258 Z" fill="#000" />
+                    <!-- Location icons -->
+                    <g class="location-icon">
+                        <path d="M250 300 m -10 0 a 10 10 0 1 0 20 0 a 10 10 0 1 0 -20 0" fill="#00aaff" />
+                        <path d="M250 290 L240 310 H260 Z" fill="#000" />
                     </g>
-                    <g class="pin">
-                        <circle cx="320" cy="220" r="8" fill="#00aaff" />
-                        <path d="M320 205 L312 220 H328 Z" fill="#000" />
+                    <g class="location-icon">
+                        <path d="M320 220 m -10 0 a 10 10 0 1 0 20 0 a 10 10 0 1 0 -20 0" fill="#00aaff" />
+                        <path d="M320 210 L310 230 H330 Z" fill="#000" />
                     </g>
-                    <g class="pin">
-                        <circle cx="450" cy="150" r="8" fill="#00aaff" />
-                        <path d="M450 135 L442 150 H458 Z" fill="#000" />
+                    <g class="location-icon">
+                        <path d="M450 150 m -10 0 a 10 10 0 1 0 20 0 a 10 10 0 1 0 -20 0" fill="#00aaff" />
+                        <path d="M450 140 L440 160 H460 Z" fill="#000" />
                     </g>
-                    <g class="pin">
-                        <circle cx="650" cy="200" r="8" fill="#00aaff" />
-                        <path d="M650 185 L642 200 H658 Z" fill="#000" />
+                    <g class="location-icon">
+                        <path d="M650 200 m -10 0 a 10 10 0 1 0 20 0 a 10 10 0 1 0 -20 0" fill="#00aaff" />
+                        <path d="M650 190 L640 210 H660 Z" fill="#000" />
                     </g>
-                    <g class="pin">
-                        <circle cx="750" cy="180" r="8" fill="#00aaff" />
-                        <path d="M750 165 L742 180 H758 Z" fill="#000" />
+                    <g class="location-icon">
+                        <path d="M750 180 m -10 0 a 10 10 0 1 0 20 0 a 10 10 0 1 0 -20 0" fill="#00aaff" />
+                        <path d="M750 170 L740 190 H760 Z" fill="#000" />
                     </g>
-                    <g class="pin">
-                        <circle cx="780" cy="220" r="8" fill="#00aaff" />
-                        <path d="M780 205 L772 220 H788 Z" fill="#000" />
+                    <g class="location-icon">
+                        <path d="M780 220 m -10 0 a 10 10 0 1 0 20 0 a 10 10 0 1 0 -20 0" fill="#00aaff" />
+                        <path d="M780 210 L770 230 H790 Z" fill="#000" />
                     </g>
                 </svg>
             </div>

@@ -463,10 +463,18 @@ header {
     height: auto;
 }
 
-.pin {
+.location-icon {
     transition: transform 0.3s ease;
 }
 
-.pin:hover {
+.location-icon:hover {
     transform: scale(1.2);
+}
+
+.region-map {
+    display: none;
+}
+
+.active-map {
+    display: block;
 }

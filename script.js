@@ -55,3 +55,15 @@ const fadeInObserver = new IntersectionObserver(function(entries, fadeInObserver
 fadeElements.forEach(element => {
     fadeInObserver.observe(element);
 });
+
+// Region map switching
+document.querySelectorAll('.region-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelectorAll('.region-link').forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+        const region = this.dataset.region;
+        document.querySelectorAll('.region-map').forEach(map => map.classList.remove('active-map'));
+        document.getElementById(`map-${region}`).classList.add('active-map');
+    });
+});
