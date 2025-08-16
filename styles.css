@@ -375,3 +375,45 @@ header {
         gap: 15px;
     }
 }
+
+/* Focus Areas Section */
+.focus-areas {
+    max-width: 1200px;
+    margin: 120px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 60px;
+}
+
+.focus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.focus-item {
+    text-align: center;
+}
+
+.focus-item i {
+    font-size: 40px;
+    color: #0077b6;
+    margin-bottom: 20px;
+}
+
+.focus-item h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.focus-item p {
+    color: #555;
+}
