@@ -67,3 +67,12 @@ document.querySelectorAll('.region-link').forEach(link => {
         document.getElementById(`map-${region}`).classList.add('active-map');
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading footer:', error));
+});

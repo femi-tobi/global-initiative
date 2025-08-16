@@ -478,3 +478,109 @@ header {
 .active-map {
     display: block;
 }
+
+/* Footer Styles */
+footer {
+    background-color: #f8f8f8;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.cta-section {
+    margin-bottom: 30px;
+}
+
+.cta-section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.cta-section p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.cta-buttons button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.volunteer-btn {
+    background-color: #ffd700;
+    color: #222;
+}
+
+.volunteer-btn:hover {
+    background-color: #e6c200;
+}
+
+.donate-btn {
+    background-color: #ccc;
+    color: #222;
+    margin-left: 20px;
+}
+
+.donate-btn:hover {
+    background-color: #b3b3b3;
+}
+
+.bottom-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo img {
+    height: 40px;
+}
+
+.footer-logo span {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0077b6;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-nav a {
+    color: #555;
+    font-weight: 500;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social a {
+    color: #777;
+    font-size: 18px;
+}
+
+.copyright {
+    font-size: 14px;
+    color: #777;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
