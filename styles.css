@@ -417,3 +417,56 @@ header {
 .focus-item p {
     color: #555;
 }
+
+/* Projects by Region Section */
+.projects-region {
+    max-width: 1200px;
+    margin: 120px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.subtitle {
+    color: #555;
+    font-size: 16px;
+    margin: -40px 0 30px;
+}
+
+.region-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.region-link {
+    color: #0077b6;
+    font-weight: 500;
+    text-decoration: none;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.region-link.active {
+    border-bottom: 2px solid #0077b6;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.map-container svg {
+    width: 100%;
+    height: auto;
+}
+
+.pin {
+    transition: transform 0.3s ease;
+}
+
+.pin:hover {
+    transform: scale(1.2);
+}
