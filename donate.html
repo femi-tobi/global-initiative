@@ -37,38 +37,57 @@
             <form class="donation-form">
                 <label for="program">Donate to Our Mission or a program of choice</label>
                 <select id="program">
-                    <option>Select Program to Donate to</option>
+                    <option>Select a Program to Donate to</option>
                 </select>
-                
-                <div class="amount-options">
-                    <button type="button">$10</button>
-                    <button type="button">$25</button>
-                    <button type="button">$50</button>
-                    <button type="button">$100</button>
-                    <button type="button">$500</button>
-                    <button type="button">Custom Amount</button>
+
+                <div class="amount-section">
+                    <label>Donation Amount</label>
+                    <div class="amount-options">
+                        <button type="button">$10</button>
+                        <button type="button">$25</button>
+                        <button type="button">$50</button>
+                        <button type="button">$100</button>
+                        <button type="button">$500</button>
+                        <button type="button" class="custom-amount-btn">Custom Amount</button>
+                    </div>
+                    <input type="text" class="custom-amount" placeholder="$ 600">
                 </div>
-                
-                <input type="text" placeholder="$600" class="custom-amount">
-                
-                <label>Select Payment Method</label>
-                <div class="payment-methods">
-                    <label><input type="radio" name="payment"> Credit Card</label>
-                    <label><input type="radio" name="payment"> PayPal</label>
+
+                <div class="payment-section">
+                    <label>Select Payment Method</label>
+                    <div class="payment-methods">
+                        <label><input type="radio" name="payment" checked> Credit Card</label>
+                        <label><input type="radio" name="payment"> Pay Pal</label>
+                    </div>
+
+                    <div class="card-section">
+                        <label>Credit Card Number</label>
+                        <input type="text" class="card-input" placeholder="">
+                    </div>
                 </div>
-                
-                <label>Card Information</label>
-                <input type="text" placeholder="Card Number">
-                
-                <div class="name-fields">
-                    <input type="text" placeholder="First Name">
-                    <input type="text" placeholder="Last Name">
+
+                <div class="personal-info">
+                    <h3>Personal Information</h3>
+                    <div class="name-row">
+                        <div class="name-field">
+                            <label>First Name</label>
+                            <input type="text" placeholder="First Name">
+                        </div>
+                        <div class="name-field">
+                            <label>Last Name</label>
+                            <input type="text" placeholder="Last Name">
+                        </div>
+                    </div>
+                    <div class="email-field">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="Email Address">
+                    </div>
                 </div>
-                
-                <div class="total">
-                    <p>Donation Total: $400</p>
-                    <button type="submit" class="donate-now">Donate Now</button>
+
+                <div class="donation-total">
+                    <p>Donation Total: <span class="amount">$600</span></p>
                 </div>
+                <button type="submit" class="donate-now">Donate Now</button>
             </form>
         </section>
     </main>
