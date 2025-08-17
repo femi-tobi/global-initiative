@@ -33,7 +33,44 @@
             <h1>Making A Donation For Our Mission</h1>
             <p>When you donate, you're supporting effective care to children and women - an investment in the leaders of tomorrow.</p>
         </section>
-        <!-- Additional content like donation form can be added here if needed -->
+        <section class="donation-form-section">
+            <form class="donation-form">
+                <label for="program">Donate to Our Mission or a program of choice</label>
+                <select id="program">
+                    <option>Select Program to Donate to</option>
+                </select>
+                
+                <div class="amount-options">
+                    <button type="button">$10</button>
+                    <button type="button">$25</button>
+                    <button type="button">$50</button>
+                    <button type="button">$100</button>
+                    <button type="button">$500</button>
+                    <button type="button">Custom Amount</button>
+                </div>
+                
+                <input type="text" placeholder="$600" class="custom-amount">
+                
+                <label>Select Payment Method</label>
+                <div class="payment-methods">
+                    <label><input type="radio" name="payment"> Credit Card</label>
+                    <label><input type="radio" name="payment"> PayPal</label>
+                </div>
+                
+                <label>Card Information</label>
+                <input type="text" placeholder="Card Number">
+                
+                <div class="name-fields">
+                    <input type="text" placeholder="First Name">
+                    <input type="text" placeholder="Last Name">
+                </div>
+                
+                <div class="total">
+                    <p>Donation Total: $400</p>
+                    <button type="submit" class="donate-now">Donate Now</button>
+                </div>
+            </form>
+        </section>
     </main>
     <footer id="footer-placeholder"></footer>
     <script src="script.js"></script>
