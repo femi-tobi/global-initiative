@@ -69,6 +69,16 @@ document.querySelectorAll('.region-link').forEach(link => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+    }
+});
+
     fetch('footer.html')
         .then(response => response.text())
         .then(data => {
