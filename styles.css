@@ -800,13 +800,13 @@ footer {
     }
 }
 
-/* Contact page hero (no image) */
-.contact-hero {
+/* Donate page hero (no image) */
+.donate-hero {
   background: linear-gradient(135deg, #EAF7FE 0%, #FFF7ED 100%);
   padding: 80px 20px 30px 20px;
   text-align: center;
 }
-.contact-hero h1 {
+.donate-hero h1 {
   font-size: 56px;
   font-weight: 800;
   color: #111;
@@ -814,7 +814,7 @@ footer {
   line-height: 1.15;
   font-family: Georgia, 'Times New Roman', serif;
 }
-.contact-hero p {
+.donate-hero p {
   color: #555;
   font-size: 16px;
 }
