@@ -77,7 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
             mobileMenu.classList.toggle('active');
         });
     }
-});
 
     fetch('footer.html')
         .then(response => response.text())
