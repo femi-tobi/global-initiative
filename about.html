@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Bright Stars Global Initiative</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Base hero */
+        .about-hero { text-align:center; padding:48px 20px; background: linear-gradient(90deg,#fff7f0, #eef8ff); }
+        .about-hero h1 { font-size:3rem; margin-bottom:8px; line-height:1.05; }
+        .about-hero p { color:#666; margin:0 auto; max-width:900px; }
+
+        /* Main two-column area */
+        .about-content { max-width:1100px; margin:36px auto; display:grid; grid-template-columns:1fr 1fr; gap:28px; align-items:center; padding:0 18px; }
+        .image-stack { position:relative; height:360px; }
+        .image-stack .img-large,
+        .image-stack .img-small { position:absolute; object-fit:cover; border-radius:6px; box-shadow:0 6px 18px rgba(35,31,32,0.06); }
+        .image-stack .img-large { width:320px; height:320px; left:40px; top:10px; border:12px solid #dff3ee; }
+        .image-stack .img-small { width:240px; height:240px; left:140px; top:140px; border:12px solid #dff3ee; }
+
+        .about-text h3 { color:#666; font-size:0.95rem; margin-bottom:8px; }
+        .about-text h2 { font-size:1.8rem; margin-bottom:8px; }
+        .about-text p { color:#666; line-height:1.7; }
+        .read-btn { display:inline-block; background:#18a26a; color:#fff; padding:10px 14px; border-radius:6px; margin-top:8px; }
+
+        .mission-vision { max-width:1100px; margin:40px auto; display:grid; grid-template-columns:1fr 1fr; gap:30px; padding:0 18px; }
+        .media-row { max-width:1100px; margin:30px auto; display:flex; gap:18px; padding:0 18px; }
+        .media-row .media { flex:1; height:160px; border-radius:6px; position:relative; overflow:hidden; }
+        .media-row .media img { width:100%; height:100%; object-fit:cover; display:block; }
+        .media-row .media.play::after { content:'\25BA'; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); font-size:36px; color:#fff; }
+
+        /* Focus section */
+        .focus-section { padding:0 18px; }
+        .focus-grid .focus-card { min-height:320px; }
+
+        /* Supporters */
+        .supporters img { max-width:120px; display:inline-block; }
+
+        /* Responsive adjustments */
+        @media (max-width:900px) {
+            .about-content, .mission-vision { grid-template-columns:1fr; }
+            .image-stack { height:300px; }
+            .image-stack .img-large { left:12px; top:8px; width:260px; height:260px; }
+            .image-stack .img-small { left:120px; top:140px; width:200px; height:200px; }
+            .about-hero h1 { font-size:2rem; }
+            .about-text h2 { font-size:1.4rem; }
+            .media-row .media { height:140px; }
+            .focus-grid { grid-template-columns:1fr; }
+            .focus-grid .focus-card { min-height:260px; }
+        }
+
+        @media (max-width:600px) {
+            .about-content { padding:0 12px; }
+            /* On phones keep one image only to reduce clutter */
+            .image-stack { height:auto; display:flex; flex-direction:column; align-items:center; gap:12px; }
+            .image-stack .img-large, .image-stack .img-small { position:relative; left:auto; top:auto; width:86%; height:220px; border-width:8px; }
+            .image-stack .img-small { display:none; }
+            .about-text { text-align:center; }
+            .about-text h2 { font-size:1.25rem; }
+            .mission-vision { grid-template-columns:1fr; }
+            .media-row { flex-direction:column; }
+            .media-row .media { width:100%; height:180px; }
+            .focus-grid { grid-template-columns:1fr !important; }
+            .supporters div { flex:1 1 45%; text-align:center; margin-bottom:12px; }
+        }
+
+        @media (max-width:400px) {
+            .about-hero { padding:30px 12px; }
+            .about-hero h1 { font-size:1.6rem; }
+            .image-stack .img-large, .image-stack .img-small { height:160px; }
+            .read-btn { padding:10px 12px; }
+        }
+        /* Story truncation helpers */
+    .story-text .see-more-btn { display:inline-block; margin-top:10px; background:#18a26a; color:#fff; padding:8px 12px; border-radius:8px; border:0; cursor:pointer; }
+    .story-text .see-more-btn.secondary { background:#eee; color:#333; }
+    .story-paragraph.truncated { overflow:hidden; }
+
+        /* Our Story layout: default two-column, stack on small screens with image first */
+        .our-story { max-width:1100px; margin:50px auto; display:grid; grid-template-columns:2fr 1fr; gap:30px; align-items:start; }
+        .our-story .story-text { order:1; }
+        .our-story .story-image { order:2; }
+
+        @media (max-width:900px) {
+            .our-story { grid-template-columns:1fr; }
+            /* on narrow screens show text first and image below */
+            .our-story .story-text { order:1; }
+            .our-story .story-image { order:2; }
+            .our-story .story-text h2 { text-align:left; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+            <div class="logo"><img src="Screenshot_20250509-190116-removebg-preview.png" alt="logo"></div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="about.html" class="nav-item">About us</a>
+                <a href="#" class="nav-item">Our Work</a>
+                <a href="get-involved.html" class="nav-item">Get involved</a>
+            </div>
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="contactus.html" class="contact-btn">Contact us <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-hero">
+            <h1>About Bright Stars Global Initiative</h1>
+            <p>Making Global Impact, One Community At A Time.</p>
+        </section>
+
+        <section class="about-content">
+            <div class="image-stack">
+                <img class="img-large" src="https://i.pinimg.com/736x/02/6e/e0/026ee05f0f15553fe0f4a5e949871d8f.jpg" alt="About image large">
+                <img class="img-small" src="https://i.pinimg.com/736x/38/71/46/3871464ef274bc4e4e8299cfbe7b5e32.jpg" alt="About image small">
+            </div>
+            <div class="about-text">
+                <h3>About Us</h3>
+                <h2>Your Support Is Really Powerful.</h2>
+                <p>Bright Stars Global Initiative (BSGI) is a visionary NGO dedicated to creating a lasting global impact. Guided by the United Nations Sustainable Development Goals, we empower youth, foster innovation, promote peace, and advocate for good health and education across communities worldwide.</p>
+                <a href="about.html" class="read-btn">Read More</a>
+            </div>
+        </section>
+
+        <section class="mission-vision">
+            <div>
+                <h3>Mission</h3>
+                <p>Our vision is a world where every individual shines brightly, thriving in a society built on peace, health, knowledge, and sustainable progress.</p>
+            </div>
+            <div>
+                <h3>Vision</h3>
+                <p>Our mission is to empower future generations through advocacy, education, innovation, and peacebuilding initiatives — driving solutions that improve lives and create equitable opportunities for all.</p>
+            </div>
+        </section>
+
+        <section class="media-row">
+            <div class="media"><img src="https://i.pinimg.com/1200x/7c/78/ef/7c78ef01228525663b9bc032553326fc.jpg" alt="media 1"></div>
+            <div class="media play"><img src="https://i.pinimg.com/736x/5c/4e/f3/5c4ef3553166d968238a6b2dcfc7bfe9.jpg" alt="media 2"></div>
+        </section>
+
+        <!-- Our Story / Background -->
+        <section class="our-story" style="max-width:1100px; margin:50px auto; display:grid; grid-template-columns:2fr 1fr; gap:30px; align-items:start;">
+            <div class="story-text">
+                <h2 style="text-align:left;">Our Story(Background)</h2>
+                <p style="color:#555; line-height:1.7; text-align:justify;">BSGI was founded with the belief that positive change is possible when communities unite for a shared purpose. From local outreach programs to global collaborations, our journey has been fueled by the passion to make a tangible difference. BSGI was founded with the belief that positive change is possible when communities unite for a shared purpose. From local outreach programs to global collaborations, our journey has been fueled by the passion to make a tangible difference. BSGI was founded with the belief that positive change is possible when communities unite for a shared purpose. From local outreach programs to global collaborations, our journey has been fueled by the passion to make a tangible difference.</p>
+            </div>
+            <div class="story-image">
+                <img src="https://picsum.photos/seed/kids/600/800" alt="children" style="width:100%; border-radius:6px; box-shadow:0 8px 24px rgba(35,31,32,0.08);">
+            </div>
+        </section>
+
+        <!-- Focus cards -->
+        <section class="focus-section" style="max-width:1100px; margin:40px auto;">
+            <h2 style="text-align:center; margin-bottom:26px;">What we focus on</h2>
+            <div class="focus-grid" style="display:grid; grid-template-columns:repeat(3,1fr); gap:22px;">
+                <div class="focus-card" style="position:relative; overflow:hidden; border-radius:14px;">
+                    <img src="https://i.pinimg.com/1200x/97/bb/9c/97bb9cc17f7dc196a19a11c276b94dbb.jpg" alt="education" style="width:100%; height:320px; object-fit:cover; display:block; filter:brightness(0.6);">
+                    <div style="position:absolute; left:20px; top:30px; color:#fff;">
+                        <h3 style="margin:0 0 8px;">Quality Education</h3>
+                        <p style="max-width:220px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                        <a href="#" class="read-btn" style="background:#fff; color:#333; display:inline-block; margin-top:12px;">Learn more</a>
+                    </div>
+                </div>
+
+                <div class="focus-card" style="position:relative; overflow:hidden; border-radius:14px;">
+                    <img src="https://i.pinimg.com/1200x/4d/e6/fb/4de6fbd9d068e8a32de4e399a9f2b8ee.jpg" alt="innovation" style="width:100%; height:320px; object-fit:cover; display:block; filter:brightness(0.6);">
+                    <div style="position:absolute; left:20px; top:30px; color:#fff;">
+                        <h3 style="margin:0 0 8px;">Innovation & Infrastructure</h3>
+                        <p style="max-width:220px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                        <a href="#" class="read-btn" style="background:#fff; color:#333; display:inline-block; margin-top:12px;">Learn more</a>
+                    </div>
+                </div>
+
+                <div class="focus-card" style="position:relative; overflow:hidden; border-radius:14px;">
+                    <img src="https://i.pinimg.com/1200x/35/ab/bf/35abbfd8d238eeef3e087a66a32b3a8b.jpg" alt="health" style="width:100%; height:320px; object-fit:cover; display:block; filter:brightness(0.6);">
+                    <div style="position:absolute; left:20px; top:30px; color:#fff;">
+                        <h3 style="margin:0 0 8px;">Good health</h3>
+                        <p style="max-width:220px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                        <a href="#" class="read-btn" style="background:#fff; color:#333; display:inline-block; margin-top:12px;">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Supporters row -->
+        <section class="supporters" style="max-width:1100px; margin:40px auto 80px;">
+            <h4 style="text-align:center; color:#666; margin-bottom:18px;">OUR SUPPORTERS</h4>
+            <div style="display:flex; gap:18px; align-items:center; justify-content:space-between; flex-wrap:wrap;">
+                <div style="flex:1 1 120px; text-align:center; color:#999;"><h1>Google</h1></div>
+                <div style="flex:1 1 120px; text-align:center; color:#999;"><h1>United Nations</h1></div>
+                <div style="flex:1 1 120px; text-align:center; color:#999;"><h1>EUs</h1></div>
+                <div style="flex:1 1 120px; text-align:center; color:#999;"><h1>Opera</h1></div>
+                <div style="flex:1 1 120px; text-align:center; color:#999;"><h1>Chrome</h1></div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer-placeholder"></footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Our Story: truncate on small screens and toggle full text
+        (function(){
+            function truncateStory() {
+                var p = document.querySelector('.story-text p');
+                if(!p) return;
+                var full = p.dataset.fulltext;
+                if(!full) { p.dataset.fulltext = p.textContent.trim(); full = p.dataset.fulltext; }
+
+                if(window.innerWidth <= 600) {
+                    // keep ~2 lines worth of characters (approx); better than CSS-only in older browsers
+                    var max = 220;
+                    if(full.length > max) {
+                        p.textContent = full.slice(0, max).trim() + '...';
+                        p.classList.add('truncated');
+                        if(!document.querySelector('.see-more-btn')) {
+                            var btn = document.createElement('button');
+                            btn.className = 'see-more-btn';
+                            btn.textContent = 'See more';
+                            btn.addEventListener('click', function(){
+                                if(p.classList.contains('truncated')){
+                                    p.textContent = full;
+                                    p.classList.remove('truncated');
+                                    btn.textContent = 'See less';
+                                } else {
+                                    p.textContent = full.slice(0, max).trim() + '...';
+                                    p.classList.add('truncated');
+                                    btn.textContent = 'See more';
+                                }
+                            });
+                            document.querySelector('.story-text').appendChild(btn);
+                        }
+                    }
+                } else {
+                    // restore full text and remove button on larger screens
+                    p.textContent = full;
+                    p.classList.remove('truncated');
+                    var b = document.querySelector('.see-more-btn'); if(b) b.remove();
+                }
+            }
+            window.addEventListener('resize', truncateStory);
+            document.addEventListener('DOMContentLoaded', truncateStory);
+        })();
+    </script>
+</body>
+</html>

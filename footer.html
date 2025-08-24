@@ -1,12 +1,21 @@
-<section class="cta-section">
-        <h2>Be part of the change. Together,</h2>
-        <h2>we can build</h2>
-        <p>Libero dictum purus ut velit aenean. Ut mattis arcu ac suspendisse vitae vel. Nunc eleifend, facilisi facilisis consectetur.</p>
-        <div class="cta-buttons">
-            <button class="volunteer-btn">Join as Volunteer</button>
-            <a href="donate.html" class="donate-btn">Donate</a>
+    <section class="cta-section" style="background:linear-gradient(90deg,#fef6f0,#eef8ff); padding:36px 18px; text-align:center; border-radius:10px;">
+        <h2 style="margin:0; font-size:1.6rem;">Be part of the change. Together, we can build.</h2>
+        <p style="color:#555; max-width:800px; margin:10px auto 18px;">Libero dictum purus ut velit aenean. Ut mattis arcu ac suspendisse vitae vel. Nunc eleifend, facilisi facilisis consectetur.</p>
+        <div class="cta-buttons" style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+            <button class="volunteer-btn" style="background:#fff; border:1px solid #ddd; padding:10px 14px; border-radius:8px;">Join as Volunteer</button>
+            <a href="donate.html" class="donate-btn contact-btn" role="button" aria-label="Donate to Bright Star" data-donate="true" style="padding:10px 16px; border-radius:8px; text-decoration:none; background-color:#0077b6;">Donate</a>
         </div>
     </section>
+    <style>
+        /* Footer donate button responsive behavior */
+    .donate-btn { box-shadow:0 8px 20px rgba(0,119,182,0.12); }
+    .donate-btn:hover { background-color:#005b8a; }
+        @media (max-width:600px) {
+            .cta-buttons { flex-direction:column; }
+            .donate-btn { width:100%; text-align:center; }
+            .volunteer-btn { width:100%; }
+        }
+    </style>
     <div class="bottom-footer">
         <div class="footer-logo">
             <img src="Screenshot_20250509-190116-removebg-preview.png" alt="Bright Star Logo">
